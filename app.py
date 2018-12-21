@@ -1,18 +1,7 @@
 
 # coding: utf-8
 
-# # Final Project
-# 
-# Create a Dashboard taking data from [Eurostat, GDP and main components (output, expenditure and income)](http://ec.europa.eu/eurostat/web/products-datasets/-/nama_10_gdp). 
-# The dashboard will have two graphs: 
-# 
-# * The first one will be a scatterplot with two DropDown boxes for the different indicators. It will have also a slide for the different years in the data. 
-# * The other graph will be a line chart with two DropDown boxes, one for the country and the other for selecting one of the indicators. (hint use Scatter object using mode = 'lines' [(more here)](https://plot.ly/python/line-charts/) 
-# 
-
-# ### Exercise 1
-
-# In[9]:
+# In[10]:
 
 
 import dash
@@ -23,7 +12,7 @@ import pandas as pd
 
 app = dash.Dash()
 
-db = pd.read_csv('nama_10_gdp_1_Data.csv', na_values=':', thousands=
+db = pd.read_csv('/Users/GPorben1/Documents/ESADE/Cloud Computing/Final Assigment/nama_10_gdp_1_Data.csv', na_values=':', thousands=
                 ' ')
 
 df=db.rename({'TIME':'Year','GEO':'Country Name', 'UNIT':'Unit', 'NA_ITEM':'Indicator Name'}, axis='columns').copy()
