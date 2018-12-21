@@ -23,9 +23,8 @@ import pandas as pd
 
 app = dash.Dash()
 
-app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"})
-
-db = pd.read_csv('nama_10_gdp_1_Data.csv', na_values=':', thousands=' ')
+db = pd.read_csv('/Users/GPorben1/Documents/ESADE/Cloud Computing/Final Assigment/nama_10_gdp_1_Data.csv', na_values=':', thousands=
+                ' ')
 
 df=db.rename({'TIME':'Year','GEO':'Country Name', 'UNIT':'Unit', 'NA_ITEM':'Indicator Name'}, axis='columns').copy()
 
